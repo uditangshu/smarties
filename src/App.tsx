@@ -1,7 +1,8 @@
 
 import { Input } from './components/Input';
 import { Link } from 'react-router-dom'; // For a React app, you can use react-router-dom for navigation
-
+import TrafficMap from './components/TrafficMap';
+import MapComponent from './components/MapComponent';
 export default function Component() {
   return (
     <header className="flex h-16 w-full items-center justify-between bg-background px-4 md:px-6 border border-color-black">
