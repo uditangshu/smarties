@@ -1,11 +1,12 @@
 // src/components/MapComponent/index.jsx
 
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
+import {NEXT_PUBLIC_GOOGLE_MAPS_API_KEY} from "./apikey"
 
 const MapComponent = () => {
   const [distanceData, setDistanceData] = useState(null);
   const [roadsData, setRoadsData] = useState(null);
-  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; // Use environment variable
+  const apikey = NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; // Use environment variable
 
   // Fetch data from custom API route
   const fetchData = async () => {

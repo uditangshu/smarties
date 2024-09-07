@@ -20,5 +20,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": ["src", "../my-app/src/components/Maps.tsx", "../my-app/src/components/Navbar.tsx"]
 }
