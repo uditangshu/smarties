@@ -71,7 +71,7 @@ export default function MyComponent() {
           </div>
         )}
         </div>
-        <div className="grid grid-cols-1 place-items-center shadow-md hover:shadow-lg h-[200px] mt-4">
+        <div className="grid grid-cols-1 place-items-center shadow-md hover:shadow-lg h-[200px] mt-4 animate-first-slide">
           <div className="font-bold text-lg pt-5">
             Congestion Index: 0
           </div>

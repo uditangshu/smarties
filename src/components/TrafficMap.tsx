@@ -29,11 +29,13 @@ const TrafficMap: React.FC = () => {
   // Callback function for when the map is loaded
   const onLoad = useCallback((map: google.maps.Map) => {
     // Customize the map here if needed
+    console.log(map)
   }, []);
 
   // Callback function for when the map is unmounted
   const onUnmount = useCallback((map: google.maps.Map) => {
     // Clean up when component unmounts
+    console.log(map)
   }, []);
 
   // Show a loading message if the map is not yet loaded
