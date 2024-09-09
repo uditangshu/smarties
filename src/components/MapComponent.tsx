@@ -1,22 +1,31 @@
-// src/components/MapComponent/index.jsx
 
 import  { useEffect, useState } from 'react';
-import {NEXT_PUBLIC_GOOGLE_MAPS_API_KEY} from "./apikey"
 
 const MapComponent = () => {
   const [distanceData, setDistanceData] = useState(null);
   const [roadsData, setRoadsData] = useState(null);
-  const apikey = NEXT_PUBLIC_GOOGLE_MAPS_API_KEY; // Use environment variable
 
-  // Fetch data from custom API route
+  // const getQueryParams = () => {
+  //   const queryParams = new URLSearchParams(window.location.search);
+  //   return {
+  //     origins: queryParams.get('origins') || '',
+  //     destinations: queryParams.get('destinations') || '',
+  //   };
+  // };
+
   const fetchData = async () => {
-    try {
-      const origins = '30.733350,76.779040'; // Example origin (New York City)
-      const destinations = '30.665260,76.861680'; // Example destination (Los Angeles)
+    // const { origins, destinations } = getQueryParams();
+    try {  
+        const origins = '30.733350,76.779040';
+      const destinations = '30.665260,76.861680';
 
-      const response = await fetch(`/api/maps?origins=${origins}&destinations=${destinations}`);
+
+      const response = await fetch(`http://localhost:8080/api/maps?origins=${origins}&destinations=${destinations}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
       const data = await response.json();
-
       setDistanceData(data.distanceMatrix);
       setRoadsData(data.snapToRoads);
     } catch (error) {

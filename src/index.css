@@ -2,3 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    @keyframes slide-iny {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes slide-in {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    @keyframes slide-inx{
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      @keyframes first-slide{
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+    .animate-slide-in{
+        animation: slide-in ease-out forwards;
+    }
+    .animate-slide-inx {
+      animation: slide-inx 1s ease-out forwards;
+    }
+    .animate-first-slide{
+        animation: first-slide 1s ease-out;
+      }
+    .animate-slide-iny{
+        animation: slide-iny 1s ease-out forwards;
+      }
+  
+    .delay-1000 {
+      animation-delay: 1s;
+    }
+  
+    .delay-2000 {
+      animation-delay: 2s;
+    }
+  
+    .delay-3000 {
+      animation-delay: 3s;
+    }
+  }
