@@ -3,6 +3,7 @@
     "builds": [
       {
         "src": "/",
+        "use": "@vercel/node",
         "config": {
           "module": "vite",
           "buildCommand": "npm run build:vite",
