@@ -1,26 +1,26 @@
-import { Input } from './Input'; 
-import { useState } from 'react';
+// import { Input } from './Input'; 
+// import { useState } from 'react';
 
 export default function Navbar() {
-  const [origins, setOrigins] = useState('');
-  const [destinations, setDestinations] = useState('');
+  // const [origins, setOrigins] = useState('');
+  // const [destinations, setDestinations] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
 
-    // Construct the query parameters
-    const queryParams = new URLSearchParams({
-      origins: origins,
-      destinations: destinations,
-    });
+  //   // Construct the query parameters
+  //   const queryParams = new URLSearchParams({
+  //     origins: origins,
+  //     destinations: destinations,
+  //   });
 
     // Update the URL without reloading the page
-    window.history.pushState(
-      {},
-      '',
-      `${window.location.pathname}?${queryParams}`
-    );
-  };
+  //   window.history.pushState(
+  //     {},
+  //     '',
+  //     `${window.location.pathname}?${queryParams}`
+  //   );
+  // };
 
   return (
     <header className="flex h-16 w-full items-center justify-between bg-background px-4 md:px-6 mb-20 shadow-lg animate-slide-iny">

@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "/",
+        "config": {
+          "module": "vite",
+          "buildCommand": "npm run build:vite",
+          "outDir": ".vercel/output"
+        }
+      }
+    ],
+    "routes": [{ "src": "/index.html", "dest": "/index.html" }]
+  }
