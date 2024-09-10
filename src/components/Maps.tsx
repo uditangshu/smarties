@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
 import TrafficMap from "./TrafficMap";
 
-const MIN_DELAY = 5000; // Minimum delay in milliseconds
-const MAX_DELAY = 8000; // Maximum delay in milliseconds
+const MIN_DELAY = 5000; 
+const MAX_DELAY = 8000; 
 
 export default function MyComponent() {
-  // State variables for red light and green light timings
+  
   const [redLightTime, setRedLightTime] = useState(0);
   const [greenLightTime, setGreenLightTime] = useState(0);
   const [trafficLightId, setTrafficLightId] = useState("");
   const [trafficLightId2, setTrafficLightId2] = useState("");
-  const [loading, setLoading] = useState(false); // State to manage loading
+  const [loading, setLoading] = useState(false); 
 
-  // Set random values for red and green lights between 10 and 50 when input changes
+  
   useEffect(() => {
     if (trafficLightId) {
-      setLoading(true); // Start loading
+      setLoading(true); 
 
       const delay = Math.floor(Math.random() * (MAX_DELAY - MIN_DELAY + 1)) + MIN_DELAY;
       
@@ -25,7 +25,7 @@ export default function MyComponent() {
 
         setRedLightTime(randomRedTime);
         setGreenLightTime(randomGreenTime);
-        setLoading(false); // End loading
+        setLoading(false); 
       }, delay);
 
 
@@ -81,12 +81,12 @@ export default function MyComponent() {
         </div>
         </div>
 
-      {/* TrafficMap div */}
+      
       <div className="text-bold w-[500px] p-8 shadow-lg hover:shadow-xl rounded animate-slide-in ">
         <TrafficMap />
       </div>
 
-      {/* Manual Override div */}
+     
       <div className="text-bold border w-[400px] shadow-lg hover:shadow-xl p-5 rounded animate-slide-inx">
         <div className="flex justify-center font-bold text-bold text-xl pt-4">
           Manual Override
